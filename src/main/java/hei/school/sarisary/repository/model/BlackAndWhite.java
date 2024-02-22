@@ -4,13 +4,18 @@ import hei.school.sarisary.PojaGenerated;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import java.sql.Timestamp;
+
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @PojaGenerated
 @Entity
 @Data
 @Builder
+@AllArgsConstructor
+@NoArgsConstructor
 public class BlackAndWhite {
   @Id private String imageId;
 
@@ -18,6 +23,4 @@ public class BlackAndWhite {
   private String processedImagePath;
   private String processingOperation;
   private Timestamp processingDate;
-
-  public BlackAndWhite() {}
 }
