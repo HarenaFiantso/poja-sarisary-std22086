@@ -12,7 +12,8 @@ import org.springframework.stereotype.Service;
 @RequiredArgsConstructor
 public class ImageConversionService {
 
-  public File savedAsFile(BufferedImage image, String imageType, String fileName) throws IOException {
+  public File savedAsFile(BufferedImage image, String imageType, String fileName)
+      throws IOException {
     File fileOutput = File.createTempFile(fileName, null);
     if (imageType.equals(MediaType.IMAGE_JPEG_VALUE)) {
       ImageIO.write(image, "jpg", fileOutput);

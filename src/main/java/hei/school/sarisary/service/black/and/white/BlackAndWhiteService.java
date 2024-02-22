@@ -76,7 +76,8 @@ public class BlackAndWhiteService {
             process ->
                 new ImageLinksPair(
                     bucketComponent.presign(process.getOriginalImagePath(), Duration.ofMinutes(2)),
-                    bucketComponent.presign(process.getProcessedImagePath(), Duration.ofMinutes(2))))
+                    bucketComponent.presign(
+                        process.getProcessedImagePath(), Duration.ofMinutes(2))))
         .orElse(null);
   }
 }
