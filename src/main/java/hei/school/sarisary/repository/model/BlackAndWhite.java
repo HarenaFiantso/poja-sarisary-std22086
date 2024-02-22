@@ -3,21 +3,21 @@ package hei.school.sarisary.repository.model;
 import hei.school.sarisary.PojaGenerated;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
-import lombok.Getter;
-import lombok.Setter;
-
 import java.sql.Timestamp;
+import lombok.Builder;
+import lombok.Data;
 
 @PojaGenerated
 @Entity
-@Getter
-@Setter
-public class BlackAndWhiteEntity {
-  @Id
-  private String id;
+@Data
+@Builder
+public class BlackAndWhite {
+  @Id private String imageId;
 
-  private String original;
-  private String edited;
-  private String operation;
-  private Timestamp time;
+  private String originalImagePath;
+  private String processedImagePath;
+  private String processingOperation;
+  private Timestamp processingDate;
+
+  public BlackAndWhite() {}
 }
